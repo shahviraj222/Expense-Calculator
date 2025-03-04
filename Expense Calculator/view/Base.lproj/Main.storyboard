@@ -80,7 +80,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Category Of Expenses" id="9l6-pc-N7z">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MKr-YB-IzW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MKr-YB-IzW">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="T7D-Ev-Zbw" id="MrY-aK-95w"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="LqA-ih-Cdj" kind="show" identifier="toExpenses" id="wRG-4w-vSQ"/>
