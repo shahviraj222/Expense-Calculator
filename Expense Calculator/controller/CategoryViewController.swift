@@ -18,6 +18,7 @@ class CategoryViewController:UITableViewController{
         loadData()
     }
     
+//    MARK: - save and load methodes.
     func saveData(){
         do{
             try context.save()
@@ -33,6 +34,8 @@ class CategoryViewController:UITableViewController{
             print("Error in loading data \(error)")
         }
     }
+    
+//    MARK: - TableView Methodes.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return category.count
     }
@@ -54,13 +57,14 @@ class CategoryViewController:UITableViewController{
         print(segue.identifier!)
         let destinationVC = segue.destination as! ExpenseViewController
         if let indexPath = tableView.indexPathForSelectedRow{
-            destinationVC.selectedCategory = category[indexPath.row].name
+            destinationVC.selectedCategory = category[indexPath.row]
 //            destinationVC.selectedCategory = category[rowno!] //not working
 //            updation is not instance.
         }
        
     }
     
+//    MARK: - adding methodes
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
     

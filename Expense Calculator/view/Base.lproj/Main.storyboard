@@ -31,7 +31,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Expenses" id="cwZ-6G-Rh2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="udx-tW-oRD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="udx-tW-oRD">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="LqA-ih-Cdj" id="bz8-Pz-uAW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bha-Jz-1XC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
